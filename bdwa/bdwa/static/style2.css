@@ -1,0 +1,76 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #010101;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #010101;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
+
+body {
+    font-family: Arial;
+}
+
+.bg-dark {
+    background-color: var(--dark) !important;
+}
+
+.navbar-brand {
+    font-style: italic;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+}
+
+.big-header {
+    letter-spacing: 0.15rem;
+}
+
+.albums-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.album {
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin: 2rem;
+    background-color: var(--dark);
+    color: white;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.album > h3 {
+    margin: auto;
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
+    vertical-align: middle;
+}
+
+a.unstyled:hover {
+    text-decoration: none;
+}

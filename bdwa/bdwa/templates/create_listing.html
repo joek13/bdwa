@@ -10,11 +10,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="/static/style2.css" />
+
     <title>Hello, world!</title>
 </head>
 
 <body>
-    <div class="container">
+    <nav class="navbar navbar-dark navbar-expand bg-dark">
+        <a class="navbar-brand" href="/">bdwa</a>
+    </nav>
+    <div class="container mt-5">
         <form method="POST" action="/api/create_listing/">{% csrf_token %}
             <h3>Contribute a listing</h3>
             <h5 class="text-muted">Help someone discover your favorite album</h5>

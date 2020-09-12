@@ -8,7 +8,7 @@ from django.template import loader
 from ..models import Listing
 
 def index_view(request: HttpRequest) -> HttpResponse:
-    template  = loader.get_template("index.html")
+    template  = loader.get_template("index2.html")
 
     listings = Listing.objects.all()
     listings = [x.to_dict() for x in listings]

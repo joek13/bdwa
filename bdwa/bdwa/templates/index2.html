@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>bdwa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/style2.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand bg-dark">
+        <a class="navbar-brand" href="/">bdwa</a>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center font-italic big-header">Blind Date With an Album</h1>
+        <p class="text-center">Discover new music using crowdsourced, mysterious descriptions. Scroll until your interest is piqued; click to reveal.</p>
+        <p class="text-center small"><a href="/create">Contribute a listing</a> | <a href="/search">Search listings</a>
+        </p>
+        <div class="albums-container">
+            {% autoescape on %}
+            {% for listing in listings %}
+            <a class="unstyled" href="{{ listing.url }}">
+                <div class="album">
+                    <h3>{{ listing.description }}</h3>
+                </div>
+            </a>
+            {% endfor %}
+            {% endautoescape %}
+        </div>
+    </div>
+</body>
+
+</html>
