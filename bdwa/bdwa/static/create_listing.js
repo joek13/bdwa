@@ -10,7 +10,7 @@ $(".albumAutoComplete").autoComplete({
         searchPost: function (resultFromServer) {
             var i = 0;
             return resultFromServer.results.map(x => { return { 
-                "value": i++, 
+                "value": JSON.stringify({"album": x["album"], "artist": x["artist"]}),
                 "text": `${x["album"]} — ${x["artist"]}` 
             }; });
         }
