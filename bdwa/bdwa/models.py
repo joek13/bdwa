@@ -24,6 +24,11 @@ class Album(models.Model):
     """
     The album's artist.
     """
+
+    album_art = models.URLField()
+    """
+    Link to album art.
+    """
     
     genre = models.ManyToManyField(Genre)
     """
