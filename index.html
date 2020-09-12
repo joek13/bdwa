@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -25,7 +25,7 @@
 
         /* home page picture */
         .bg-img {
-            background-image: url("/static/scenic.jpg");
+            background-image: url("scenic.jpg");
             height:700px;
             width: 100%;
             -webkit-background-size: 100% auto;
@@ -72,13 +72,13 @@
             </li>
 
             <li class="nav-item">
-                <a href="#search" class="nav-link">
+                <a href="search.html" class="nav-link">
                     <i class="fas fa-search"></i>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a href="#create" class="nav-link">
+                <a href="plus.html" class="nav-link">
                     <i class="fas fa-plus-circle"></i>
                 </a>
             </li>
@@ -197,6 +197,9 @@
         </div>
     </div>
 
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -206,28 +209,18 @@
 
     <script>
       $(document).ready(function(){
-      // Add smooth scrolling to all links
+      // smooth scroll
           $("a").on('click', function(event) {
           
-              // Make sure this.hash has a value before overriding default behavior
               if (this.hash !== "") {
-              // Prevent default anchor click behavior
+
               event.preventDefault();
           
               // Store hash
               var hash = this.hash;
-          
-              // Using jQuery's animate() method to add smooth page scroll
-              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
               $('html, body').animate({
                   scrollTop: $(hash).offset().top - 100
               }, 750) 
-              // function(){
-              //     console.log("yessirr")
-              //     // Add hash (#) to URL when done scrolling (default click behavior)
-              //     window.location.hash = hash;
-              //     // $('html').animate({ 'scrollTop': scrollToPosition }, 0);
-              // });
               } // End if
           });
       });
