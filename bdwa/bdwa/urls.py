@@ -20,5 +20,6 @@ from . import views
 
 urlpatterns = [
     path("", views.index.index_view, name="index"),
+    path("albums/", views.search.search_albums, name="albums"),
     path('admin/', admin.site.urls),
 ]

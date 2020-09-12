@@ -467,4 +467,472 @@
       });
       </script>
   </body>
+</html><html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <script src="https://kit.fontawesome.com/a84da40d8a.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* nav bar */
+        .nav-item {
+            padding: 20px;
+        }
+
+        i {
+            font-size: 32px;
+        }
+
+        /* home page picture */
+        .bg-img {
+            background-image: url("/static/scenic.jpg");
+            height:700px;
+            width: 100%;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -ms-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+
+        /* music bags */
+        .row {
+            padding: 10px;
+            height:50%;
+            top: 150px;
+        }
+
+        .card {
+            text-align: center;
+        }
+
+        .container {
+            position:relative;
+            background: #ffcccb;
+	padding: 40px;
+	text-align:center;
+    border-radius: 10px;
+    margin-top: 8%;
+        }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="110">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#feed" class="nav-link">
+                    <i class="far fa-newspaper"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#search" class="nav-link">
+                    <i class="fas fa-search"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#create" class="nav-link">
+                    <i class="fas fa-plus-circle"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="home">
+        <div class = "bg-img">
+            <div class="centerText">
+                Welcome back!
+                <br> 
+                <a href="#feed" class="btn btn-transparent text-white rounded-0" id = "frontButton">News Feed</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="feed" style="height:150vh;">
+        <h1>Blind Date with an Album</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Song Name</h5>
+                          <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-check"></i>
+                          </a>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-times"></i>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Song Name</h5>
+                          <!-- if we want subtitle -->
+                          <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-check"></i>
+                          </a>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-times"></i>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 ">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Song Name</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-check"></i>
+                          </a>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-times"></i>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Song Name</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-check"></i>
+                          </a>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-times"></i>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Song Name</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-check"></i>
+                          </a>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-times"></i>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Song Name</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-check"></i>
+                          </a>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-times"></i>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+      // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+          
+              // Make sure this.hash has a value before overriding default behavior
+              if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+          
+              // Store hash
+              var hash = this.hash;
+          
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                  scrollTop: $(hash).offset().top - 100
+              }, 750) 
+              // function(){
+              //     console.log("yessirr")
+              //     // Add hash (#) to URL when done scrolling (default click behavior)
+              //     window.location.hash = hash;
+              //     // $('html').animate({ 'scrollTop': scrollToPosition }, 0);
+              // });
+              } // End if
+          });
+      });
+      </script>
+  </body>
+</html><html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <script src="https://kit.fontawesome.com/a84da40d8a.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* nav bar */
+        .nav-item {
+            padding: 20px;
+        }
+
+        i {
+            font-size: 32px;
+        }
+
+        /* home page picture */
+        .bg-img {
+            background-image: url("/static/scenic.jpg");
+            height:700px;
+            width: 100%;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -ms-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+
+        /* music bags */
+        .row {
+            padding: 10px;
+            height:50%;
+            top: 150px;
+        }
+
+        .card {
+            text-align: center;
+        }
+
+        .container {
+            position:relative;
+            background: #ffcccb;
+	padding: 40px;
+	text-align:center;
+    border-radius: 10px;
+    margin-top: 8%;
+        }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="110">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#feed" class="nav-link">
+                    <i class="far fa-newspaper"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#search" class="nav-link">
+                    <i class="fas fa-search"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#create" class="nav-link">
+                    <i class="fas fa-plus-circle"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="home">
+        <div class = "bg-img">
+            <div class="centerText">
+                Welcome back!
+                <br> 
+                <a href="#feed" class="btn btn-transparent text-white rounded-0" id = "frontButton">News Feed</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="feed" style="height:150vh;">
+        <h1>Blind Date with an Album</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Song Name</h5>
+                          <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-check"></i>
+                          </a>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-times"></i>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Song Name</h5>
+                          <!-- if we want subtitle -->
+                          <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-check"></i>
+                          </a>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-times"></i>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 ">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Song Name</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-check"></i>
+                          </a>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-times"></i>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Song Name</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-check"></i>
+                          </a>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-times"></i>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Song Name</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-check"></i>
+                          </a>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-times"></i>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Song Name</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-check"></i>
+                          </a>
+                          <a href="#" class="card-link">
+                            <i class="fas fa-times"></i>
+                          </a>
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+      // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+          
+              // Make sure this.hash has a value before overriding default behavior
+              if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+          
+              // Store hash
+              var hash = this.hash;
+          
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                  scrollTop: $(hash).offset().top - 100
+              }, 750) 
+              // function(){
+              //     console.log("yessirr")
+              //     // Add hash (#) to URL when done scrolling (default click behavior)
+              //     window.location.hash = hash;
+              //     // $('html').animate({ 'scrollTop': scrollToPosition }, 0);
+              // });
+              } // End if
+          });
+      });
+      </script>
+  </body>
 </html>
