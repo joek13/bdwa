@@ -27,11 +27,23 @@
           font-size: 32px;
       }
 
+      /* card filling */
+
+
       /* card preview */
       h1 {
           padding: 20px;
           text-align: center;
       }
+
+      .col-md-12 {
+          background-color: antiquewhite;
+      }
+
+      #preview {
+        background: #ffcccb;
+      }
+
 
       /* home page picture
       .bg-img {
@@ -102,30 +114,59 @@
                 <div class="card-body">
                     <h1 class="card-title"><b>Post your Song!<hr class = "lined"></b></h1>
                         <div class="container-sm">
-                            <form action="thankYou.html">
-                            <div>Song Name: <BR> <input type="text" name="name" value="" placeholder="Name" style = "padding: 10px;">
+                            <div id = "text" style="font-size: 20px; font-weight: bold;">
+                                Song Name:
+                                <input type="text" placeholder="Name" style="padding:5px;">
+                                <!-- name="name" value=""     style = "padding: 10px;" -->
                             </div>
                     
-                            <div><BR>Genre: <BR> <input type="text" name="genre" value="" placeholder="Genre" style = "padding: 10px;">
+                            <BR>
+                            <div id="genre" style="font-size: 20px; font-weight: bold;">
+                                 Genre:
+                                 <!-- genreDiv was changed -->
+                                <input id="genreDiv" type="text" name="genre" value="" placeholder="Genre" style="padding:5px;">
                             </div>
                     
-                            <div><BR> Tags: <BR> <textarea rows = 10 cols = 100 style = "padding: 10px;"></textarea>
+                            <!-- <div id="tag"><BR> Tags: <BR> <input id="tag" type="text" name="tag" value="" placeholder="Tag" style = "padding: 10px;">
+                            </div> -->
+
+                            <BR>
+                            <div id="descript">
+                                Description:
+                                <BR>
+                                <input type="text" placeholder="Description" style="width: 45rem;">
                             </div>
+                            <BR>
                                 <input class="btn btn-success text-white rounded-0" type="submit" value="Post Song!"> 
-                                </form>
                         </div>
                 </div>
             </div>  
         </div>
     </div>
 
-    <h1>Preview:</h1>
     <div class="col-md-12" style="padding: 25px;">
-        <div class="card mx-auto" style="width: 18rem;">
+        <h1>Preview:</h1>
+        <div class="card mx-auto" style="width: 18rem;" id="preview">
             <div class="card-body">
-              <h5 class="card-title">Song Name</h5>
+              <!-- <h5 class="card-title"> -->
+                  <div id="genrename">
+                  <input type="text" placeholder="Genre">
+                  <BR>
+                </div>
+
+                <BR>
+                <!-- </h5> -->
               <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div id="descriptName">
+                  <input style="height: 18rem;" type="text" placeholder="Description">       
+              </div>
+
+              <div id="cardTag">
+                  <BR>
+                <input type="text" placeholder="Tags">
+              </div>
+
+              <BR>
               <a href="#" class="card-link">
                 <i class="fas fa-check"></i>
               </a>
@@ -144,5 +185,30 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="preview.js"></script>
+
+    <!-- <script>
+        $(document).ready(function(){
+            $("div").delegate("@song", "click",function(){
+                $("@song").css("background-color", "pink");
+            });
+        });
+        // var element = document.getElementById("songname");
+        // console.log("hi")
+
+        // // if (element.innerHTML != null) {
+        // //     console.log(element.innerHTML)
+        // // }
+        // element.addEventListener("keyup", function (event) { 
+  
+        // // Checking if key pressed is ENTER or not 
+        // // if the key pressed is ENTER 
+        // // click listener on button is called 
+        //     if (event.keyCode == 13) { 
+        //         var enteredSong = document.getElementById("song");
+        //         element.innerHTML = enteredSong.innerHTML;
+        //     } 
+        // }); 
+    </script> -->
   </body>
 </html>
