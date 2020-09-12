@@ -29,7 +29,7 @@ class Album(models.Model):
     """
     Link to album art.
     """
-    
+     
     genre = models.ManyToManyField(Genre)
     """
     The album's genre.
@@ -56,9 +56,15 @@ class Listing(models.Model):
     """
     User-contributed description of this Album.
     """  
+
     score = models.IntegerField()
     """
     Crowd-determined score of the listing
+    """
+
+    date_created = models.DateTimeField(auto_now_add=true)
+    """
+    The date this listing was created.
     """
 
     def get_absolute_url(self):
@@ -72,3 +78,16 @@ class Listing(models.Model):
             "score": self.score
         }
 
+
+
+# def get_random_listing(for_album):
+#     import random
+#     items = Listing.objects.all()
+#     # if you want only a single random item
+#     random_item = random.choice(items)
+
+def get_random_album():
+    import random
+    items = Album.objects.all()
+    # if you want only a single random item
+    random_item = random.choice(items)
