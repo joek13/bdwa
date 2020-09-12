@@ -24,7 +24,7 @@
 
       /* home page picture */
       .bg-img {
-          background-image: url("scenic.jpg");
+          background-image: url("plane.jpg");
           height:700px;
           width: 100%;
           -webkit-background-size: 100% auto;
@@ -32,6 +32,16 @@
           -ms-background-size: 100% auto;
           -o-background-size: 100% auto;
           background-size: 100% auto;
+      }
+
+      .centerText{
+        position: absolute; 
+        top: 50%; 
+        text-align: center; 
+        width: 100%; 
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
       }
 
       /* music bags */
@@ -83,6 +93,36 @@ text-align:center;
           </li>
       </ul>
   </nav>
+
+  <!-- <div id="home">
+    <div class = "bg-img"> -->
+        <div class="centerText">
+            Find your songs.
+            <br> 
+        </div>
+    <!-- </div>
+</div> -->
+
+  <div class = "bg-img"></div>
+  <div class="container">
+      <form method="POST" action="/api/create_listing/">{% csrf_token %}
+          <h3>Contribute a listing</h3>
+          <h5 class="text-muted">Help someone discover your favorite album</h5>
+          <hr/>
+          <h4>Album</h4>
+          <p>Search for an album to contribute a listing for.</p>
+          <select class="form-control albumAutoComplete" required placeholder="Kind of Blue" name="album" autocomplete="off"></select>
+          <hr/>
+          <h4>Description</h4>
+          <p>Describe the album in a few sentences, without revealing what it is or who it is by!</p>
+          <textarea name="description" maxlength="280" required class="form-control" placeholder="Innovative album that pioneered the genre of modal jazz."></textarea>
+          <br/>
+          <input class="btn btn-primary" type="submit" value="Submit" />
+          <br/>
+          <br/>
+          <br/>
+      </form>
+  </div>
 
   <div class="nextSection">
     <h1>helllooo</h1>
