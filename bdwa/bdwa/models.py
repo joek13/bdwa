@@ -106,8 +106,8 @@ def sample_listings(n):
         ret.append(get_random_listing(a))
     return ret
 
-def of_genre(g){
+def of_genre(g):
     return Listing.objects.get(genre=g)
-}
+
 
     
