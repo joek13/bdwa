@@ -7,21 +7,21 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
-def search_albums(request: HttpRequest) -> JsonResponse:
+def search_albums(request: HttpRequest, limit = 10) -> JsonResponse:
     query = request.GET.get("q")
 
     if query is None:
         raise ValueError("query cannot be None.")
 
     # TODO: cache-control?
-    results = _search(query)
+    results = _search(query)[0:limit]
     return JsonResponse({"results": results})
 
 def _search(query, base_url="http://localhost:300"):
     resp = requests.get(f"https://www.last.fm/search/albums?q={query}")
     resp.raise_for_status()
 
-    soup = BeautifulSoup(resp.content)
+    soup = BeautifulSoup(resp.content, features="html.parser")
 
     return [
         {
