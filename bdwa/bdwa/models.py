@@ -88,17 +88,14 @@ class Listing(models.Model):
 
 def get_random_listing(for_album):
     items = Listing.objects.get(album=for_album)
-    # if you want only a single random item
     random_item = random.choice(items)
 
 def get_random_album():
     items = Album.objects.all()
-    # if you want only a single random item
     return random.choice(items)
 
 def get_albums(n):
     items = Album.objects.all()
-    # change 3 to how many random items you want
     random_items = random.sample(items, n)
 
 def sample_listings(n):
@@ -107,5 +104,9 @@ def sample_listings(n):
     for a in albums:
         ret.append(get_random_listing(a))
     return ret
+
+def of_genre(g){
+    return Listing.objects.get(genre=g)
+}
 
     
