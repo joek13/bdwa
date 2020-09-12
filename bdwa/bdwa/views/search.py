@@ -17,7 +17,7 @@ def search_albums(request: HttpRequest, limit = 10) -> JsonResponse:
     results = _search(query)[0:limit]
     return JsonResponse({"results": results})
 
-def _search(query, base_url="http://localhost:300"):
+def _search(query):
     resp = requests.get(f"https://www.last.fm/search/albums?q={query}")
     resp.raise_for_status()
 
