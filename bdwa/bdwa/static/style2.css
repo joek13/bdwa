@@ -70,6 +70,10 @@ body {
     vertical-align: middle;
 }
 
+.btn-dark {
+    background-color: var(--dark);
+}
+
 a.unstyled:hover {
     text-decoration: none;
 }
