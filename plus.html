@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style2.css">
+    <title>Hello, world!</title>
+
+    <script src="https://kit.fontawesome.com/a84da40d8a.js" crossorigin="anonymous"></script>
+
+    <style>
+        .card-title {
+            text-align: center;
+        }
+
+              /* nav bar */
+      .nav-item {
+          padding: 20px;
+      }
+
+      i {
+          font-size: 32px;
+      }
+
+      /* card preview */
+      h1 {
+          padding: 20px;
+          text-align: center;
+      }
+
+      /* home page picture
+      .bg-img {
+          background-image: url("scenic.jpg");
+          height:700px;
+          width: 100%;
+          -webkit-background-size: 100% auto;
+          -moz-background-size: 100% auto;
+          -ms-background-size: 100% auto;
+          -o-background-size: 100% auto;
+          background-size: 100% auto;
+      } */
+
+      /* music bags */
+      .row {
+          padding: 10px;
+          height:50%;
+          top: 150px;
+      }
+
+      .card {
+          text-align: center;
+          padding-top: 100px;
+      }
+
+      /* .container {
+          position:relative;
+          background: #ffcccb;
+        padding: 40px;
+        text-align:center;
+        border-radius: 10px;
+        margin-top: 8%;
+      } */
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="far fa-newspaper"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="search.html" class="nav-link">
+                    <i class="fas fa-search"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="plus.html" class="nav-link active">
+                    <i class="fas fa-plus-circle"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="submission">
+        <div id="content">
+            <div class="card bg-white">
+                <div class="card-body">
+                    <h1 class="card-title"><b>Post your Song!<hr class = "lined"></b></h1>
+                        <div class="container-sm">
+                            <form action="thankYou.html">
+                            <div>Song Name: <BR> <input type="text" name="name" value="" placeholder="Name" style = "padding: 10px;">
+                            </div>
+                    
+                            <div><BR>Genre: <BR> <input type="text" name="genre" value="" placeholder="Genre" style = "padding: 10px;">
+                            </div>
+                    
+                            <div><BR> Tags: <BR> <textarea rows = 10 cols = 100 style = "padding: 10px;"></textarea>
+                            </div>
+                                <input class="btn btn-success text-white rounded-0" type="submit" value="Post Song!"> 
+                                </form>
+                        </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <h1>Preview:</h1>
+    <div class="col-md-12" style="padding: 25px;">
+        <div class="card mx-auto" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Song Name</h5>
+              <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="card-link">
+                <i class="fas fa-check"></i>
+              </a>
+              <a href="#" class="card-link">
+                <i class="fas fa-times"></i>
+              </a>
+            </div>
+          </div>
+    </div>
+
+
+ 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
