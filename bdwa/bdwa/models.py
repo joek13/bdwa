@@ -3,6 +3,7 @@ Database models.
 """
 
 from django.db import models
+import random
 
 class Genre(models.Model):
     """
@@ -86,13 +87,25 @@ class Listing(models.Model):
 
 
 def get_random_listing(for_album):
-    import random
     items = Listing.objects.get(album=for_album)
     # if you want only a single random item
     random_item = random.choice(items)
 
 def get_random_album():
-    import random
     items = Album.objects.all()
     # if you want only a single random item
     return random.choice(items)
+
+def get_albums(n):
+    items = Album.objects.all()
+    # change 3 to how many random items you want
+    random_items = random.sample(items, n)
+
+def sample_listings(n):
+    albums = get_albums(n)
+    ret = []
+    for a in albums:
+        ret.append(get_random_listing(a))
+    return ret
+
+    
