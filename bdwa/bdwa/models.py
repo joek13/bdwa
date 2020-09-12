@@ -40,12 +40,12 @@ class Listing(models.Model):
     The album this listing describes.
     """
 
-    description = models.TextField()
+    description = models.CharField(max_length=280)
     """
     User-contributed description of this Album.
-    """
-    
+    """  
     score = models.IntegerField()
     """
-    Crowd-determined score of listing
+    Crowd-determined score of the listing
     """
+
