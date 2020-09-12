@@ -44,3 +44,8 @@ class Listing(models.Model):
     """
     User-contributed description of this Album.
     """
+    
+    score = models.IntegerField()
+    """
+    Crowd-determined score of listing
+    """
