@@ -41,6 +41,8 @@ class Album(models.Model):
             "artist": self.artist,
             "album_art": self.album_art
         }
+    def __str__(self):
+        return self.title
 
 class Listing(models.Model):
     """
@@ -62,7 +64,7 @@ class Listing(models.Model):
     Crowd-determined score of the listing
     """
 
-    date_created = models.DateTimeField(auto_now_add=True)
+    date_created = models.DateTimeField(auto_now_add=True,null = True)
     """
     The date this listing was created.
     """
@@ -78,17 +80,19 @@ class Listing(models.Model):
             "score": self.score,
             "url": self.get_absolute_url()
         }
+    def __str__(self):
+        return self.description
 
 
 
-# def get_random_listing(for_album):
-#     import random
-#     items = Listing.objects.all()
-#     # if you want only a single random item
-#     random_item = random.choice(items)
+def get_random_listing(for_album):
+    import random
+    items = Listing.objects.get(album=for_album)
+    # if you want only a single random item
+    random_item = random.choice(items)
 
 def get_random_album():
     import random
     items = Album.objects.all()
     # if you want only a single random item
-    random_item = random.choice(items)
+    return random.choice(items)
