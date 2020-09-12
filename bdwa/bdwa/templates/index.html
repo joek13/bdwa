@@ -1,5 +1,8 @@
 <!doctype html>
 <html lang="en">
+html {
+  scroll-behavior: smooth;
+}
 
 <head>
   <!-- Required meta tags -->
@@ -148,7 +151,7 @@
           // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
           $('html, body').animate({
             scrollTop: $(hash).offset().top - 100
-          }, 750)
+          }, 40)
           // function(){
           //     console.log("yessirr")
           //     // Add hash (#) to URL when done scrolling (default click behavior)
