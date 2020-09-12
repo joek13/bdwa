@@ -62,7 +62,7 @@ class Listing(models.Model):
     Crowd-determined score of the listing
     """
 
-    date_created = models.DateTimeField(auto_now_add=true)
+    date_created = models.DateTimeField(auto_now_add=True)
     """
     The date this listing was created.
     """
