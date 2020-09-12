@@ -16,12 +16,12 @@ class Album(models.Model):
     A single album, which might have multiple listings.
     """
 
-    title = models.TextField()
+    title = models.TextField(max_length=500)
     """
     The album title.
     """
 
-    artist = models.TextField()
+    artist = models.TextField(max_length=500)
     """
     The album's artist.
     """
