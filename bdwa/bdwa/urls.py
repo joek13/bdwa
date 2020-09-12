@@ -22,7 +22,8 @@ urlpatterns = [
     path("", views.index.index_view, name="index"),
     path("albums/", views.search.search_albums, name="albums"),
     path("create/", views.listing.create_listing_view, name="create_listing"),
-    path("api/create_listing/", views.listing.create_listing, name="create_listing_api"),
     path("listing/<int:listing_id>", views.listing.show_listing_view, name="show_listing"),
     path('admin/', admin.site.urls),
+    path("api/create_listing/", views.listing.create_listing, name="create_listing_api"),
+    path("api/vote_listing/<int:listing_id>/<int:sign>", views.vote.vote_listing, name="vote_listing_api"),
 ]

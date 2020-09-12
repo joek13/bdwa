@@ -11,14 +11,18 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+    <script src="https://kit.fontawesome.com/a84da40d8a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container">
-        <img src="{{ album.album_art }}" />
+    <div class="container mt-5">
+        <img class="rounded mr-4 float-left" src="{{ album.album_art }}" />
         <h3>{{ album.title }} — {{ album.artist }}</h3>
         <p>{{description}}</p>
-        <p>Listing score: {{ score }}</p>
+        <p>Listing score: <span id="listing-score">{{ score }}</span></p>
+        <p class="text-muted small">Contributed on: {{ date_created }}</p>
+        <button class="btn btn-sm btn-success vote-up"><i class="fas fa-thumbs-up"></i></button>
+        <button class="btn btn-sm btn-danger vote-down"><i class="fas fa-thumbs-down"></i></button>
     </div>
 
     <!-- Optional JavaScript -->
@@ -32,6 +36,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="/static/bootstrap-autocomplete.min.js"></script>
+    <script src="/static/show_listing.js"></script>
 </body>
 
 </html>
