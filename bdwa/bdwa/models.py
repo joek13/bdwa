@@ -35,6 +35,13 @@ class Album(models.Model):
     The album's genre.
     """
 
+    def to_dict(self):
+        return {
+            "title": self.title,
+            "artist": self.artist,
+            "album_art": self.album_art
+        }
+
 class Listing(models.Model):
     """
     A user-contributed listing of a given album.
@@ -53,4 +60,15 @@ class Listing(models.Model):
     """
     Crowd-determined score of the listing
     """
+
+    def get_absolute_url(self):
+        import django.urls
+        return django.urls.reverse("show_listing", args=[self.id])
+    
+    def to_dict(self):
+        return {
+            "album": self.album.to_dict(),
+            "description": self.description,
+            "score": self.score
+        }
 
