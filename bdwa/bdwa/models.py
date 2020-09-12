@@ -25,7 +25,7 @@ class Album(models.Model):
     The album's artist.
     """
     
-    genre = modes.ManytoManyField(Genre)
+    genre = models.ManytoManyField(Genre)
     """
     The album's genre.
     """
