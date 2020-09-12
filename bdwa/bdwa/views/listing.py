@@ -41,12 +41,6 @@ def create_listing(request: HttpRequest) -> HttpResponse:
 
     description = description.strip().replace("\n", " ")
 
-    # commence hack!
-    search_string = album_info["artist"] + " " + album_info["album"]
-    # search lastfm for album info (input validation)
-    results = search._search(search_string)
-    album_info = results[0]
-
     # get or create album
     album, created = Album.objects.get_or_create(
         title = album_info["album"],
