@@ -4,6 +4,12 @@ Database models.
 
 from django.db import models
 
+class Genre(models.Model):
+    """
+    A genre
+    """
+    name = models.TextField()
+
 class Album(models.Model):
     """
     A single album, which might have multiple listings.
@@ -17,6 +23,11 @@ class Album(models.Model):
     artist = models.TextField()
     """
     The album's artist.
+    """
+    
+    genre = modes.ManytoManyField(Genre)
+    """
+    The album's genre.
     """
 
 class Listing(models.Model):
