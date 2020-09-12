@@ -18,6 +18,18 @@
             text-align: center;
         }
 
+        /* image */
+        .bg-img {
+            background-image: url("piano.jpg");
+            height:700px;
+            width: 100%;
+            -webkit-background-size: 100% auto;
+            -moz-background-size: 100% auto;
+            -ms-background-size: 100% auto;
+            -o-background-size: 100% auto;
+            background-size: 100% auto;
+        }
+
               /* nav bar */
       .nav-item {
           padding: 20px;
@@ -28,6 +40,34 @@
       }
 
       /* card filling */
+
+      label {
+          width: 240px;
+display: inline-block;
+      }
+      /* #text {
+          float:left;
+      }
+
+      #genre {
+          float:left;
+      } */
+      /* #text {
+        display: inline-block;
+        float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+      } */
+      /* #genre{
+        display: inline-block;
+    float: left;
+    }
+    #descript {
+    display: inline-block;
+    float: left;
+    } */
+
 
 
       /* card preview */
@@ -112,33 +152,38 @@
         <div id="content">
             <div class="card bg-white">
                 <div class="card-body">
-                    <h1 class="card-title"><b>Post your Song!<hr class = "lined"></b></h1>
+                    <div class = "bg-img">
+                    <h1 class="card-title" style="color:red;"><b>Post your Song!<hr class = "lined"></b></h1>
                         <div class="container-sm">
-                            <div id = "text" style="font-size: 20px; font-weight: bold;">
-                                Song Name:
-                                <input type="text" placeholder="Name" style="padding:5px;">
-                                <!-- name="name" value=""     style = "padding: 10px;" -->
-                            </div>
-                    
-                            <BR>
-                            <div id="genre" style="font-size: 20px; font-weight: bold;">
-                                 Genre:
-                                 <!-- genreDiv was changed -->
-                                <input id="genreDiv" type="text" name="genre" value="" placeholder="Genre" style="padding:5px;">
+                            <div class="textblocks">
+                                <div id = "text" style="font-size: 20px; font-weight: bold;">
+                                    <label for="textblock" style="color:rgb(48, 138, 141);">Song Name:</label>
+                                    <input id="textblock" type="text" placeholder="Name" style="padding:5px;">
+                                    <!-- name="name" value=""     style = "padding: 10px;" -->
+                                </div>
+                        
+                                <BR>
+                                <div id="genre" style="font-size: 20px; font-weight: bold;">
+                                        <!-- genreDiv was changed -->
+                                        <label for="textblock" style="color:rgb(48, 138, 141);">Genre:</label>
+                                    <input id="textblock" type="text" name="genre" value="" placeholder="Genre" style="padding:5px;">
+                                </div>
                             </div>
                     
                             <!-- <div id="tag"><BR> Tags: <BR> <input id="tag" type="text" name="tag" value="" placeholder="Tag" style = "padding: 10px;">
                             </div> -->
 
                             <BR>
-                            <div id="descript">
-                                Description:
+                            <div id="descript" style="color:rgb(48, 138, 141);">
+                                <h10 style="font-size: 20px; font-weight: bold;">Description:</h10>
+                                Describe the album in a few sentences, without revealing what it is or who it is by!
                                 <BR>
-                                <input type="text" placeholder="Description" style="width: 45rem;">
+                                <input type="text" placeholder="Innovative album that pioneered the genre of modal jazz" style="width: 45rem;">
                             </div>
                             <BR>
                                 <input class="btn btn-success text-white rounded-0" type="submit" value="Post Song!"> 
                         </div>
+                    </div>
                 </div>
             </div>  
         </div>
