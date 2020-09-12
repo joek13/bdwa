@@ -21,5 +21,7 @@ from . import views
 urlpatterns = [
     path("", views.index.index_view, name="index"),
     path("albums/", views.search.search_albums, name="albums"),
+    path("create/", views.listing.create_listing_view, name="create_listing"),
+    path("api/create_listing/", views.listing.create_listing, name="create_listing_api"),
     path('admin/', admin.site.urls),
 ]
