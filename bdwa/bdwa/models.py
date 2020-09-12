@@ -75,7 +75,8 @@ class Listing(models.Model):
         return {
             "album": self.album.to_dict(),
             "description": self.description,
-            "score": self.score
+            "score": self.score,
+            "url": self.get_absolute_url()
         }
 
 
