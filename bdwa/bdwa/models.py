@@ -78,6 +78,7 @@ class Listing(models.Model):
             "album": self.album.to_dict(),
             "description": self.description,
             "score": self.score,
+            "date_created": self.date_created,
             "url": self.get_absolute_url()
         }
     def __str__(self):
