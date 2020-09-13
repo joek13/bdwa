@@ -23,8 +23,9 @@
     <div class="container mt-5">
         <img class="rounded mr-4 float-left" src="{{ album.album_art }}" />
         <h3>{{ album.title }} — {{ album.artist }}</h3>
+        <h5 class="text-muted">Description:</h5>
         <p>{{description}}</p>
-        <p>Like this listing?</p>
+        <p>Like this description?</p>
         <button class="btn btn-sm btn-success vote-up"><i class="fas fa-thumbs-up"></i></button>
         <p class="badge badge-primary">Score: <span id="listing-score">{{ score }}</span></p>
         <button class="btn btn-sm btn-danger vote-down"><i class="fas fa-thumbs-down"></i></button>
