@@ -16,7 +16,8 @@ def search_listings(request: HttpRequest) -> HttpResponse:
     query = request.GET.get("q")
     
     if query is None:
-        return redirect("/")
+        template = loader.get_template("search.html")
+        return HttpResponse(template.render(None, request))
     
     # search for listings whose description match the string
     # or maybe listings whose albums also match??
