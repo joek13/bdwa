@@ -57,7 +57,7 @@ def search_listings(request: HttpRequest) -> HttpResponse:
     
     # search for listings whose description match the string
     # or maybe listings whose albums also match??
-    entry_query = get_query(query, ['description',"album__title"])
+    entry_query = get_query(query, ['description',"album__title","album__artist"])
     
     results = Listing.objects.filter(entry_query)
     # results = Listing.objects.annotate(
