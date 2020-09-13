@@ -88,8 +88,9 @@ class Listing(models.Model):
 
 
 def get_random_listing(for_album):
-    items = Listing.objects.get(album=for_album)
+    items = Listing.objects.filter(album=for_album).all()
     random_item = random.choice(items)
+    return random_item
 
 def get_random_album():
     items = Album.objects.all()
@@ -97,7 +98,9 @@ def get_random_album():
 
 def get_albums(n):
     items = Album.objects.all()
-    random_items = random.sample(items, n)
+    n = min(n, len(items))
+    random_items = random.sample(list(items), n)
+    return random_items
 
 def sample_listings(n):
     albums = get_albums(n)
