@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>bdwa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/static/style2.css" />
+    <script src="https://kit.fontawesome.com/a84da40d8a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand bg-dark">
+        <a class="navbar-brand" href="/">bdwa</a>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center font-italic big-header">search</h1>
+        <p class="text-center">Search for albums by their name or description</p>
+        <form class="search-form" action="/search">
+            <div class="input-group">
+                <input class="form-control" name="q" type="text" maxlength="50" />
+                <button class="input-group-append btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-md fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
