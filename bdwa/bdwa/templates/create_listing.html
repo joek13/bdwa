@@ -16,23 +16,25 @@
     <style>
         .bg-img {
             /* color:red; */
-            background-image: /* tint image */
+            background-image:
+                /* tint image */
                 linear-gradient(to right, rgba(192, 192, 192, 0.75), rgba(192, 192, 192, 0.75)),
                 /* checkered effect */
                 linear-gradient(to right, black 50%, white 50%),
                 linear-gradient(to bottom, black 50%, white 50%);
             background-blend-mode: normal, difference, normal;
             background-size: 2em 2em;
-            height:700px;
+            height: 700px;
             width: 100%;
-            top:10rem;
+            top: 10rem;
             -webkit-background-size: 100% auto;
             -moz-background-size: 100% auto;
             -ms-background-size: 100% auto;
             -o-background-size: 100% auto;
             background-size: 100% auto;
-            position: relative /* Declared position allows for location changes */
-            background-position: 175px 5px;
+            position: relative;
+                /* Declared position allows for location changes */
+                background-position: 175px 5px;
             background-position: right 580px bottom 10px;
 
         }
@@ -43,24 +45,24 @@
     <nav class="navbar navbar-dark navbar-expand bg-dark">
         <a class="navbar-brand" href="/">bdwa</a>
     </nav>
-    <div class="bg-img">
-        <!-- <div class="container mt-5"> -->
-            <form method="POST" action="/api/create_listing/">{% csrf_token %}
-                <div class="container" style="padding-top: 15px;">
-                    <h3>Contribute a listing</h3>
-                    <h5 class="text-muted">Help someone discover your favorite album</h5>
-                    <hr/>
-                    <h4>Album</h4>
-                    <p>Search for an album to contribute a listing for.</p>
-                    <select class="form-control albumAutoComplete" required placeholder="Kind of Blue" name="album" autocomplete="off"></select>
-                    <hr/>
-                    <h4>Description</h4>
-                    <p>Describe the album in a few sentences, without revealing what it is or who it is by!</p>
-                    <textarea name="description" maxlength="280" required class="form-control" placeholder="Innovative album that pioneered the genre of modal jazz."></textarea>
-                    <br/>
-                    <input class="btn btn-dark" type="submit" value="Submit" />
-                </div>
-            </form>
+    <div class="container mt-5">
+        <h1 class="text-center font-italic big-header">contribute</h1>
+        <p class="text-center">Help someone discover your favorite album.</p>
+        <form method="POST" action="/api/create_listing/">{% csrf_token %}
+            <div class="container">
+                <h4>Album</h4>
+                <p>Search for an album to contribute a listing for.</p>
+                <select class="form-control albumAutoComplete" required placeholder="Kind of Blue" name="album"
+                    autocomplete="off"></select>
+                <hr />
+                <h4>Description</h4>
+                <p>Describe the album in a few sentences, without revealing what it is or who it is by!</p>
+                <textarea name="description" maxlength="280" required class="form-control"
+                    placeholder="Innovative album that pioneered the genre of modal jazz."></textarea>
+                <br />
+                <input class="btn btn-dark" type="submit" value="Submit" />
+            </div>
+        </form>
     </div>
 
     <!-- Optional JavaScript -->

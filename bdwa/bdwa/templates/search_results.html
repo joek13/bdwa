@@ -15,17 +15,21 @@
     </nav>
     <div class="container mt-5">
         <h1 class="text-center font-italic big-header">search results</h1>
-        </p>
+        <p class="text-center">for "{{ query }}"</p>
         <div class="albums-container">
-            {% autoescape on %}
-            {% for listing in results %}
-            <a class="unstyled" href="{{ listing.url }}">
-                <div class="album">
-                    <h3>{{ listing.description }}</h3>
-                </div>
-            </a>
-            {% endfor %}
-            {% endautoescape %}
+            {% if results %}
+                {% autoescape on %}
+                {% for listing in results %}
+                <a class="unstyled" href="{{ listing.url }}">
+                    <div class="album">
+                        <h3>{{ listing.description }}</h3>
+                    </div>
+                </a>
+                {% endfor %}
+                {% endautoescape %}
+            {% else %}
+                <h3 class="text-muted font-italic mt-5">We got nothin'.</h3>
+            {% endif %}
         </div>
     </div>
 </body>

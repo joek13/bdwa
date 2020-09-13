@@ -5,7 +5,6 @@ Album search endpoint.
 from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.shortcuts import redirect
 from django.template import loader
-from django.contrib.postgres.search import SearchVector
 
 from ..models import Listing, Album
 
@@ -52,7 +51,7 @@ def get_query(query_string, search_fields):
 def search_listings(request: HttpRequest) -> HttpResponse:
     query = request.GET.get("q")
     
-    if query is None:
+    if query is None or query == "":
         template = loader.get_template("search.html")
         return HttpResponse(template.render(None, request))
     
@@ -70,7 +69,8 @@ def search_listings(request: HttpRequest) -> HttpResponse:
     template = loader.get_template("search_results.html")
 
     context = {
-        "results": [x.to_dict() for x in results]
+        "results": [x.to_dict() for x in results],
+        "query": query
     }
 
     return HttpResponse(template.render(context, request))
