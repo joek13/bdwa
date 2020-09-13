@@ -29,3 +29,8 @@ def index_view(request: HttpRequest) -> HttpResponse:
     }
 
     return HttpResponse(template.render(context, request))
+
+def about_view(request: HttpRequest) -> HttpResponse:
+    template = loader.get_template("about.html")
+
+    return HttpResponse(template.render(None, request))

@@ -23,6 +23,7 @@ urlpatterns = [
     path("albums/", views.search.search_albums, name="albums"),
     path('search/', views.search.search_listings, name="search_listings"),
     path("create/", views.listing.create_listing_view, name="create_listing"),
+    path("about/", views.index.about_view, name="about_view"),
     path("listing/<int:listing_id>", views.listing.show_listing_view, name="show_listing"),
     path('admin/', admin.site.urls),
     path("api/create_listing/", views.listing.create_listing, name="create_listing_api"),
