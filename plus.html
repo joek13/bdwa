@@ -1,4 +1,4 @@
-<!doctype html>
+!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -21,7 +21,7 @@
         /* image */
         .bg-img {
             background-image: url("piano.jpg");
-            height:700px;
+            height:1300px;
             width: 100%;
             -webkit-background-size: 100% auto;
             -moz-background-size: 100% auto;
@@ -43,7 +43,12 @@
 
       label {
           width: 240px;
-display: inline-block;
+        display: inline-block;
+      }
+
+      input {
+        position: relative;
+        top: 140 px;
       }
       /* #text {
           float:left;
@@ -82,6 +87,7 @@ display: inline-block;
 
       #preview {
         background: #ffcccb;
+
       }
 
 
@@ -153,7 +159,7 @@ display: inline-block;
             <div class="card bg-white">
                 <div class="card-body">
                     <div class = "bg-img">
-                    <h1 class="card-title" style="color:red;"><b>Post your Song!<hr class = "lined"></b></h1>
+                    <h1 class="card-title" style="color:rgb(48, 138, 141);"><b>Post your Song!<hr class = "lined"></b></h1>
                         <div class="container-sm">
                             <div class="textblocks">
                                 <div id = "text" style="font-size: 20px; font-weight: bold;">
@@ -166,7 +172,7 @@ display: inline-block;
                                 <div id="genre" style="font-size: 20px; font-weight: bold;">
                                         <!-- genreDiv was changed -->
                                         <label for="textblock" style="color:rgb(48, 138, 141);">Genre:</label>
-                                    <input id="textblock" type="text" name="genre" value="" placeholder="Genre" style="padding:5px;">
+                                    <input id="textblock" type="text" name="genre" value="" placeholder="Genre" style="padding-top: -50px;">
                                 </div>
                             </div>
                     
@@ -181,7 +187,41 @@ display: inline-block;
                                 <input type="text" placeholder="Innovative album that pioneered the genre of modal jazz" style="width: 45rem;">
                             </div>
                             <BR>
-                                <input class="btn btn-success text-white rounded-0" type="submit" value="Post Song!"> 
+                                <h1 style="color:rgb(48, 138, 141);">Preview:</h1>
+                                <div class="card mx-auto" style="width: 18rem;" id="preview">
+                                    <div class="card-body" style="top: 18 px;">
+                                      <!-- <h5 class="card-title"> -->
+                                          <div id="genrename" style="margin-top: 5px;">
+                                          <input type="text" placeholder="Genre">
+                                          <BR>
+                                        </div>
+                        
+                                        <BR>
+                                        <!-- </h5> -->
+                                      <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                                      <div id="descriptName">
+                                          <input style="height: 18rem;" type="text" placeholder="Description">       
+                                      </div>
+                        
+                                      <div id="cardTag">
+                                          <BR>
+                                        <input type="text" placeholder="Tags">
+                                      </div>
+                        
+                                      <BR>
+                                      <a href="#" class="card-link">
+                                        <i class="fas fa-check"></i>
+                                      </a>
+                                      <a href="#" class="card-link">
+                                        <i class="fas fa-times"></i>
+                                      </a>
+                                    </div>
+                                  </div>
+
+                                  <BR>
+                                  <input class="btn btn-success text-white rounded-0" type="submit" value="Post Song!"
+                                  style="padding:15px;"> 
+
                         </div>
                     </div>
                 </div>
@@ -189,20 +229,20 @@ display: inline-block;
         </div>
     </div>
 
-    <div class="col-md-12" style="padding: 25px;">
+    <!-- <div class="col-md-12" style="padding: 25px;">
         <h1>Preview:</h1>
         <div class="card mx-auto" style="width: 18rem;" id="preview">
-            <div class="card-body">
+            <div class="card-body"> -->
               <!-- <h5 class="card-title"> -->
-                  <div id="genrename">
+                  <!-- <div id="genrename">
                   <input type="text" placeholder="Genre">
                   <BR>
                 </div>
 
-                <BR>
+                <BR> -->
                 <!-- </h5> -->
               <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
-              <div id="descriptName">
+              <!-- <div id="descriptName">
                   <input style="height: 18rem;" type="text" placeholder="Description">       
               </div>
 
@@ -218,9 +258,9 @@ display: inline-block;
               <a href="#" class="card-link">
                 <i class="fas fa-times"></i>
               </a>
-            </div>
-          </div>
-    </div>
+            </div> -->
+          <!-- </div>
+    </div> -->
 
 
  
