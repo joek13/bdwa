@@ -5,7 +5,7 @@ Defines the index view for the homepage.
 from django.http import HttpRequest, HttpResponse
 from django.template import loader
 
-from ..models import Listing
+from ..models import Listing, get_albums, get_random_listing
 import random
 
 SPLASHES = [
@@ -19,7 +19,8 @@ SPLASHES = [
 def index_view(request: HttpRequest) -> HttpResponse:
     template  = loader.get_template("index2.html")
 
-    listings = Listing.objects.all()
+    albums = get_albums(9)
+    listings = [get_random_listing(album) for album in albums]
     listings = [x.to_dict() for x in listings]
 
     context = {
