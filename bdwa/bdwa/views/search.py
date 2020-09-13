@@ -3,15 +3,39 @@ Album search endpoint.
 """
 
 from django.http import HttpRequest, HttpResponse, JsonResponse
+from django.shortcuts import redirect
+from django.template import loader
+
+from ..models import Listing
+
 import requests
 from bs4 import BeautifulSoup
 import re
+
+def search_listings(request: HttpRequest) -> HttpResponse:
+    query = request.GET.get("q")
+    
+    if query is None:
+        return redirect("/")
+    
+    # search for listings whose description match the string
+    # or maybe listings whose albums also match??
+
+    results = Listing.objects.all()
+
+    template = loader.get_template("search_results.html")
+
+    context = {
+        "results": [x.to_dict() for x in results]
+    }
+
+    return HttpResponse(template.render(context, request))
 
 def search_albums(request: HttpRequest, limit = 10) -> JsonResponse:
     query = request.GET.get("q")
 
     if query is None:
-        raise ValueError("query cannot be None.")
+        raise ValueError("'q' parameter cannot be None.")
 
     # TODO: cache-control?
     results = _search(query)[0:limit]
