@@ -16,12 +16,13 @@ SPLASHES = [
     "Find your next big phase.",
 ]
 
+
 def index_view(request: HttpRequest) -> HttpResponse:
-    template  = loader.get_template("index2.html")
+    template = loader.get_template("index2.html")
 
     albums = get_albums(9)
     listings = [get_random_listing(album) for album in albums]
-    listings = [x.to_dict() for x in listings]
+    listings = [x.to_dict() for x in listings if x is not None]
 
     context = {
         "listings": listings,
@@ -29,6 +30,7 @@ def index_view(request: HttpRequest) -> HttpResponse:
     }
 
     return HttpResponse(template.render(context, request))
+
 
 def about_view(request: HttpRequest) -> HttpResponse:
     template = loader.get_template("about.html")

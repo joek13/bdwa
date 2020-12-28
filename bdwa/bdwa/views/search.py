@@ -14,6 +14,7 @@ import re
 
 from django.db.models import Q
 
+
 def normalize_query(query_string,
                     findterms=re.compile(r'"([^"]+)"|(\S+)').findall,
                     normspace=re.compile(r'\s{2,}').sub):
@@ -27,15 +28,16 @@ def normalize_query(query_string,
     '''
     return [normspace(' ', (t[0] or t[1]).strip()) for t in findterms(query_string)]
 
+
 def get_query(query_string, search_fields):
     ''' Returns a query, that is a combination of Q objects. That combination
         aims to search keywords within a model by testing the given search fields.
 
     '''
-    query = None # Query to search for every search term        
+    query = None  # Query to search for every search term
     terms = normalize_query(query_string)
     for term in terms:
-        or_query = None # Query to search for a given term in each field
+        or_query = None  # Query to search for a given term in each field
         for field_name in search_fields:
             q = Q(**{"%s__icontains" % field_name: term})
             if or_query is None:
@@ -48,18 +50,20 @@ def get_query(query_string, search_fields):
             query = query & or_query
     return query
 
+
 def search_listings(request: HttpRequest) -> HttpResponse:
     query = request.GET.get("q")
-    
+
     if query is None or query == "":
         template = loader.get_template("search.html")
         return HttpResponse(template.render(None, request))
-    
+
     # search for listings whose description match the string
     # or maybe listings whose albums also match??
-    entry_query = get_query(query, ['description',"album__title","album__artist"])
-    
-    results = Listing.objects.filter(entry_query)
+    entry_query = get_query(
+        query, ['description', "album__title", "album__artist"])
+
+    results = Listing.objects.filter(entry_query, approved=True)
     # results = Listing.objects.annotate(
     #  search=SearchVector('description'),
     #   ).filter(search=query)
@@ -75,7 +79,8 @@ def search_listings(request: HttpRequest) -> HttpResponse:
 
     return HttpResponse(template.render(context, request))
 
-def search_albums(request: HttpRequest, limit = 10) -> JsonResponse:
+
+def search_albums(request: HttpRequest, limit=10) -> JsonResponse:
     query = request.GET.get("q")
 
     if query is None:
@@ -84,6 +89,7 @@ def search_albums(request: HttpRequest, limit = 10) -> JsonResponse:
     # TODO: cache-control?
     results = _search(query)[0:limit]
     return JsonResponse({"results": results})
+
 
 def _search(query):
     resp = requests.get(f"https://www.last.fm/search/albums?q={query}")
@@ -96,7 +102,7 @@ def _search(query):
             "url":
             re.sub("(\d+s)", "300x300",
                    x.find("img").attrs["src"]
-                ),
+                   ),
             "album":
             x.find("h4").a.text,
             "artist":
