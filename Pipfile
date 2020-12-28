@@ -4,12 +4,19 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+psycopg2-binary = "*"
 
 [packages]
 django = "*"
 beautifulsoup4 = "*"
 requests = "*"
 gunicorn = "*"
+django-environ = "*"
+dj-database-url = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+server = "heroku local"
